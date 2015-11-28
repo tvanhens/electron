@@ -1,4 +1,4 @@
-(ns electron.core)
+(ns figwheel-electron.core)
 
 (defn foo
   "I don't do a whole lot."

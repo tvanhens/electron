@@ -1,4 +1,4 @@
-# electron
+# figwheel-electron
 
 A Leiningen template for FIXME.
 

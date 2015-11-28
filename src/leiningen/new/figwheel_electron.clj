@@ -1,4 +1,4 @@
-(ns leiningen.new.electron
+(ns leiningen.new.figwheel-electron
   (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]
             [leiningen.core.main :as main]
             [clojure.java.io :as io]
@@ -9,7 +9,7 @@
 (defn binary [file]
   (io/input-stream (io/resource (str/join "/" ["leiningen" "new" "electron" file]))))
 
-(defn electron
+(defn figwheel-electron
   "FIXME: write documentation"
   [name application-name]
   (let [data {:name name
