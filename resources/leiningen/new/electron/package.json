@@ -1,0 +1,28 @@
+{
+    "name": "{{name}}",
+    "version": "1.0.0",
+    "description": "An Electron application",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron main.js",
+
+        "clean": "rm -fr ./dist",
+
+        "build": "npm run clean && electron-packager . \"{{application-name}}\" --platform=darwin --arch=x64 --version=0.35.0 --ignore '/src|/dev|/target|project.clj' --out dist/osx --overwrite --asar --icon \"assets/osx/mount.png\"",
+
+        "pack": "npm run build && electron-builder \"dist/osx/{{application-name}}-darwin-x64/{{application-name}}.app\" --platform=osx --out=\"dist/osx\" --config=packager.json"
+    },
+    "keywords": [
+        "Electron",
+        "quick",
+        "start",
+        "tutorial"
+    ],
+    "author": "Author",
+    "license": "License",
+    "devDependencies": {
+        "electron-builder": "^2.3.0",
+        "electron-packager": "^5.1.1",
+        "electron-prebuilt": "^0.35.0"
+    }
+}
